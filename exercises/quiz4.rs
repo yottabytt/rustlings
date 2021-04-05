@@ -5,7 +5,21 @@
 
 // Write a macro that passes the quiz! No hints this time, you can do it!
 
-// I AM NOT DONE
+/*
+remember that my_macro! in assert_eq! does a replacement with macro code
+so it should be scoped using {} inside the arm and should have a ruby return 
+statement
+*/
+
+macro_rules! my_macro {
+    ($val:expr) => {
+        {
+            let mut s = String::from("Hello ");
+            s.push_str($val);
+            s
+        }
+    };
+}
 
 #[cfg(test)]
 mod tests {

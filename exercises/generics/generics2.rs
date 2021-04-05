@@ -1,14 +1,20 @@
 // This powerful wrapper provides the ability to store a positive integer value.
 // Rewrite it using generics so that it supports wrapping ANY type.
 
-// I AM NOT DONE
+/*
+https://doc.rust-lang.org/stable/book/ch10-01-syntax.html#in-method-definitions
 
-struct Wrapper {
-    value: u32,
+A nice fact is monomorphization. 
+Because Rust compiles generic code into code that specifies the type in each 
+instance, we pay no runtime cost for using generics.
+*/
+
+struct Wrapper<T> {
+    value: T,
 }
 
-impl Wrapper {
-    pub fn new(value: u32) -> Self {
+impl<T> Wrapper<T> {
+    pub fn new(value: T) -> Self {
         Wrapper { value }
     }
 }

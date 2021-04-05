@@ -6,12 +6,14 @@
 // This test has a problem with it -- make the test compile! Make the test
 // pass! Make the test fail! Execute `rustlings hint tests1` for hints :)
 
-// I AM NOT DONE
+/*
+https://doc.rust-lang.org/stable/book/ch11-01-writing-tests.html#checking-results-with-the-assert-macro
+*/
 
 #[cfg(test)]
 mod tests {
     #[test]
     fn you_can_assert() {
-        assert!();
+        assert!(true);
     }
 }

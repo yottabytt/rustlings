@@ -8,15 +8,34 @@
 // which appends "Bar" to any object
 // implementing this trait.
 
-// I AM NOT DONE
+/*
+interesting to know about self and Self
+https://stackoverflow.com/questions/32304595/whats-the-difference-between-self-and-self
+*/
 
 trait AppendBar {
     fn append_bar(self) -> Self;
 }
 
 impl AppendBar for String {
-    //Add your code here
+    fn append_bar(self) -> Self {
+        let mut s = self;
+        s.push_str("Bar");
+        return s;
+    }
 }
+
+/*
+this also works :)
+
+impl AppendBar for String {
+    fn append_bar(self: String) -> String {
+        let mut s = self;
+        s.push_str("Bar");
+        return s;
+    }
+}
+*/
 
 fn main() {
     let s = String::from("Foo");

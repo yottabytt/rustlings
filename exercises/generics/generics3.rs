@@ -10,20 +10,30 @@
 
 // Execute 'rustlings hint generics3' for hints!
 
-// I AM NOT DONE
+/*
+https://doc.rust-lang.org/stable/book/ch10-02-traits.html
 
-pub struct ReportCard {
-    pub grade: f32,
+
+looks we need to bound to those types that impl Display. 
+but was more a trial and error syntactically. the below section helped.
+
+https://doc.rust-lang.org/stable/book/ch10-02-traits.html#using-trait-bounds-to-conditionally-implement-methods
+*/
+use std::fmt::Display;
+
+pub struct ReportCard<T> {
+    pub grade: T,
     pub student_name: String,
     pub student_age: u8,
 }
 
-impl ReportCard {
+impl<T: Display> ReportCard<T> {
     pub fn print(&self) -> String {
         format!("{} ({}) - achieved a grade of {}",
             &self.student_name, &self.student_age, &self.grade)
     }
 }
+
 
 #[cfg(test)]
 mod tests {
@@ -46,7 +56,7 @@ mod tests {
     fn generate_alphabetic_report_card() {
         // TODO: Make sure to change the grade here after you finish the exercise.
         let report_card = ReportCard {
-            grade: 2.1,
+            grade: "A+",
             student_name: "Gary Plotter".to_string(),
             student_age: 11,
         };

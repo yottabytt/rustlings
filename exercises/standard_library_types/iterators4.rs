@@ -1,6 +1,13 @@
 // iterators4.rs
 
-// I AM NOT DONE
+/*
+i will not lie. it was SO that rescued. 
+https://stackoverflow.com/questions/60835646/how-do-i-create-a-non-recursive-calculation-of-factorial-using-iterators-and-ran
+
+was able to come up with range expression but wasn't able to connect the dots
+until i realized there existed a product() method on a iterator
+range is a iterator 
+*/
 
 pub fn factorial(num: u64) -> u64 {
     // Complete this function to return the factorial of num
@@ -12,6 +19,7 @@ pub fn factorial(num: u64) -> u64 {
     // For an extra challenge, don't use:
     // - recursion
     // Execute `rustlings hint iterators4` for hints.
+    (1..=num).product()
 }
 
 #[cfg(test)]

@@ -4,7 +4,10 @@
 // we expect to get when we call `is_even(5)`.
 // Execute `rustlings hint tests3` for hints :)
 
-// I AM NOT DONE
+/*
+goal is to make both assert! passes and not panic!
+when assert! fails, it panics.
+*/
 
 pub fn is_even(num: i32) -> bool {
     num % 2 == 0
@@ -16,11 +19,11 @@ mod tests {
 
     #[test]
     fn is_true_when_even() {
-        assert!();
+        assert!(is_even(4));
     }
 
     #[test]
     fn is_false_when_odd() {
-        assert!();
+        assert!(!is_even(3));
     }
 }

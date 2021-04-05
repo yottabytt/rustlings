@@ -1,7 +1,10 @@
 // macros1.rs
 // Make me compile! Execute `rustlings hint macros1` for hints :)
 
-// I AM NOT DONE
+/*
+https://doc.rust-lang.org/book/ch19-06-macros.html#declarative-macros-with-macro_rules-for-general-metaprogramming
+straightforward syntax thing.
+*/
 
 macro_rules! my_macro {
     () => {
@@ -10,5 +13,7 @@ macro_rules! my_macro {
 }
 
 fn main() {
-    my_macro();
+    my_macro![];
+    my_macro!();
+    my_macro!{};
 }
