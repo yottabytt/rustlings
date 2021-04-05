@@ -1,3 +1,8 @@
+# yottabytt's solutions to rustlings 🦀❤️ exercises
+
+The only change when compared to the [rustlings repo](https://github.com/rust-lang/rustlings) is the `exercises` directory. 
+I am leaving the README and rest of the code intact.
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-84-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
